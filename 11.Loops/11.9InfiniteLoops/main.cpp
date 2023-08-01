@@ -1,15 +1,13 @@
 #include <iostream>
 
-
-int main(){
-   
-
-   //Infinite loop : for loop
-   /*
-   for(size_t i{};true ; ++i){
-       std::cout << i <<  " : I love C++" << std::endl;
-   }
-   */
+int main()
+{
+    //Infinite loop : for loop
+    /*
+    for(size_t i{};true ; ++i){
+        std::cout << i <<  " : I love C++" << std::endl;
+    }
+    */
 
     //Infinite loop : while loop
     /*
@@ -21,15 +19,15 @@ int main(){
     }
     */
 
-
     //Infinite loop : do while loop
 
-    size_t i{0};
+    size_t i { 0 };
 
-    do{
-        std::cout << i  << " : I love C++" << std::endl;
+    do
+    {
+        std::cout << i << " : I love C++" << std::endl;
         ++i;
-    }while(true);
-    
+    } while (true);
+
     return 0;
 }
