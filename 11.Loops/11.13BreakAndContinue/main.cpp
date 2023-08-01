@@ -1,9 +1,7 @@
 #include <iostream>
 
-
-int main(){
-
-
+int main()
+{
     /*
     // break and continue : for loops
     const size_t COUNT{20};
@@ -22,46 +20,48 @@ int main(){
     */
 
 
-   // break and continue : while loop
-    /*
-   size_t i{0};
+    // break and continue : while loop
+     /*
+    size_t i{0};
 
-   while (i < 20){
+    while (i < 20){
 
-       if(i==5){
+        if(i==5){
+             ++i;
+             continue;
+        }
+
+      if(i==11)
+         break;
+
+
+         std::cout << "i : " << i << std::endl;
+         ++i;
+
+    }
+    std::cout << "Loop done!" << std::endl;
+    */
+
+
+    //break and continue : do while loop
+    size_t i { 0 };
+
+    do
+    {
+        if (i == 5)
+        {
             ++i;
             continue;
-       }
+        }
 
-     if(i==11)
-        break;
+        if (i == 11)
+            break;
 
 
         std::cout << "i : " << i << std::endl;
         ++i;
 
-   }
-   std::cout << "Loop done!" << std::endl;
-   */
+    } while (i < 20);
 
-
-  //break and continue : do while loop
-  size_t i{0};
-
-  do{
-      if(i==5){
-            ++i;
-            continue;
-       }
-
-     if(i==11)
-        break;
-
-
-        std::cout << "i : " << i << std::endl;
-        ++i;
-
-  }while(i <20);
-  
     return 0;
 }
