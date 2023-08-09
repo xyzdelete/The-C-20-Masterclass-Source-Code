@@ -1,10 +1,9 @@
 #include <iostream>
 
+int main()
+{
+	int numbers[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 
-int main(){
-
-	int numbers[] {1,2,3,4,5,6,7,8,9,0};
-	
 	//Read beyond bounds : Will read garbage or crash your program
 	//std::cout << "numbers[12] : " << numbers[12] << std::endl;
 
@@ -16,8 +15,8 @@ int main(){
 	numbers[129] = 1000;
 	std::cout << "numbers[129] : " << numbers[129] << std::endl;
 
-    std::cout << "Program ending...." << std::endl;
+	std::cout << "Program ending...." << std::endl;
 
-    
-    return 0;
+
+	return 0;
 }
