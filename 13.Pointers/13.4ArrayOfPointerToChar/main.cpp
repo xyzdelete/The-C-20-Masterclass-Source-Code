@@ -1,8 +1,9 @@
 #include <iostream>
 #include <ctime>
 
-int main(){
-   //srand() has to run once per program run
+int main()
+{
+    //srand() has to run once per program run
     std::srand(std::time(0)); // Seed
 
 
@@ -19,25 +20,25 @@ int main(){
     char prediction9[]{ "you laughing your lungs out. I've never seen this before." };
     */
 
-   /*
-    char predictions [] [90] {
-        "a lot of kinds running in the backyard!",
-        "a lot of empty beer bootles on your work table.",
-        "you Partying too much with kids wearing weird clothes.",
-        "you running away from something really scary",
-        "clouds gathering in the sky and an army standing ready for war",
-        "dogs running around in a deserted empty city",
-        "a lot of cars stuck in a terrible traffic jam",
-        "you sitting in the dark typing lots of lines of code on your dirty computer",
-        "you yelling at your boss. And oh no! You get fired!",
-        "you laughing your lungs out. I've never seen this before.",
-        ", huum, I don't see anything",
-        "you drinking wine"
-    };
-    */
+    /*
+     char predictions [] [90] {
+         "a lot of kinds running in the backyard!",
+         "a lot of empty beer bootles on your work table.",
+         "you Partying too much with kids wearing weird clothes.",
+         "you running away from something really scary",
+         "clouds gathering in the sky and an army standing ready for war",
+         "dogs running around in a deserted empty city",
+         "a lot of cars stuck in a terrible traffic jam",
+         "you sitting in the dark typing lots of lines of code on your dirty computer",
+         "you yelling at your boss. And oh no! You get fired!",
+         "you laughing your lungs out. I've never seen this before.",
+         ", huum, I don't see anything",
+         "you drinking wine"
+     };
+     */
 
-   	// METHOD3.
-    const char * predictions []  {
+     // METHOD3.
+    const char* predictions[] {
         "a lot of kids running in the backyard!",
         "a lot of empty beer bootles on your work table.",
         "you Partying too much with kids wearing weird clothes.",
@@ -47,19 +48,20 @@ int main(){
         "a lot of cars stuck in a terrible traffic jam",
         "you sitting in the dark typing lots of lines of code on your dirty computer",
         "you yelling at your boss. And oh no! You get fired!",
-        "you laughing your lungs out. I've never seen this before." 
+        "you laughing your lungs out. I've never seen this before."
     };
 
-    bool end{ false };
+    bool end { false };
 
-    const int  max_length{ 15 };
-    char name[max_length]{};
+    const int  max_length { 15 };
+    char name[max_length] {};
 
     std::cout << "What's your name dear :" << std::endl;
 
     std::cin.getline(name, max_length); // Get input with spaces
 
-    while (!end) {
+    while (!end)
+    {
         std::cout << "Oh dear " << name << ", I see ";
 
         size_t rand_num = static_cast<size_t>((std::rand() % std::size(predictions)));
