@@ -1,21 +1,26 @@
 #include <iostream>
 
 //Definition
-auto max(int& a, int& b){
-    if(a>b){
+auto max(int& a, int& b)
+{
+    if (a > b)
+    {
         return a;
-    }else{
+    }
+    else
+    {
         return b; // Will return a copy.
     }
 }
 
-int main(){
+int main()
+{
 
-    int x{5};
-    int y{9};
+    int x { 5 };
+    int y { 9 };
 
-    int int_val = max(x,y);
-   
+    int int_val = max(x, y);
+
     return 0;
 }
 
