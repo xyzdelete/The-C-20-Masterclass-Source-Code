@@ -35,7 +35,8 @@ int main()
     char b { 9 };
 
 
-    auto result = max(a, b);
+    auto result = max(5.0, 5.0);
+    std::cout << result << std::endl;
 
 
     return 0;
