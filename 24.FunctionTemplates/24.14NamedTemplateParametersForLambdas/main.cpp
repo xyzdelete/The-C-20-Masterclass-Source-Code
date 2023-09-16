@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 int main(){
 
     auto func =  [] <typename T, typename P>(T a, P b){
