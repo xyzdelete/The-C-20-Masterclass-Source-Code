@@ -1,28 +1,30 @@
 #include <iostream>
 
-class Dog{
-    public : 
-        std::string m_name;
+class Dog {
+public:
+    std::string m_name;
 };
 
 struct Cat
 {
-    public : 
-        std::string m_name;
+public:
+    std::string m_name;
 };
 
 
-struct Point{
+struct Point {
     double x;
     double y;
 };
 
-void print_point(const Point& point){
+void print_point(const Point& point)
+{
     std::cout << "Point [ x: " << point.x << ", y : " << point.y << "]" << std::endl;
 }
 
 
-int main(){
+int main()
+{
     Dog dog1;
     Cat cat1;
 
@@ -42,8 +44,8 @@ int main(){
     point1.y = 2.7;
     print_point(point1);
 
-    
 
-   
+
+
     return 0;
 }
