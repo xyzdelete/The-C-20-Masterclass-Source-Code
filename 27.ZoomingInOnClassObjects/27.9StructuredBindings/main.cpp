@@ -1,19 +1,19 @@
 #include <iostream>
-
-
 class Point
 {
-public : 
+public:
     double x;
     double y;
 };
 
-void print_point(const Point p){
+void print_point(const Point p)
+{
     std::cout << "Point [ x : " << p.x << ", y : " << p.y << "]" << std::endl;
 }
 
 
-int main(){
+int main()
+{
 
     Point point1;
 
@@ -22,7 +22,7 @@ int main(){
 
     print_point(point1);
 
-    auto [a,b] = point1;
+    auto [a, b] = point1;
 
     std::cout << "a : " << a << std::endl;
     std::cout << "b : " << b << std::endl;
@@ -35,12 +35,13 @@ int main(){
     std::cout << "a : " << a << std::endl;
     std::cout << "b : " << b << std::endl;
 
-    auto func = [=](){
-        std::cout << "a (captured) : " << a << std::endl;
-        std::cout << "b (captured) : " << b << std::endl;
-    };
+    auto func = [=]()
+        {
+            std::cout << "a (captured) : " << a << std::endl;
+            std::cout << "b (captured) : " << b << std::endl;
+        };
     func();
 
-    
+
     return 0;
 }
