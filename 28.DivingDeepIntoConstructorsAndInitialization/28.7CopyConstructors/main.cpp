@@ -2,9 +2,9 @@
 #include "person.h"
 
 
-int main(){
-
-    Person  p1("John","Snow",25);
+int main()
+{
+    Person  p1("John", "Snow", 25);
     p1.print_info();
 
     //Create a person copy
@@ -16,6 +16,6 @@ int main(){
     p1.set_age(30);
     p1.print_info();
     p2.print_info();
-   
+
     return 0;
 }
