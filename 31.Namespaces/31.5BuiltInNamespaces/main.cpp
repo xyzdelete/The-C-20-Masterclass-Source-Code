@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 
-int main(){
-    
+int main()
+{
     std::cout << "Hello World" << std::endl;
-    std::string message{"Hello World"};
+    std::string message { "Hello World" };
     std::cout << message << std::endl;
     return 0;
 }
