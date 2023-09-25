@@ -1,21 +1,21 @@
 #include <iostream>
 
 //No linkage
-void some_function(){
-    int age {34}; // No linkage
+void some_function()
+{
+    int age { 34 }; // No linkage
     std::cout << "age : " << age << " &age : " << &age << std::endl;
 }
 
-const double distance{45.8}; // Internal linkage
+const double distance { 45.8 }; // Internal linkage
 
-int item_count {6}; // External linkage
-
-
+int item_count { 6 }; // External linkage
 
 extern void print_distance();
 extern void print_item_count();
 
-int main(){
+int main()
+{
 
     /*
     std::cout << "distance(main) : " << distance << "  &distance : " << &distance <<std::endl;
@@ -32,7 +32,7 @@ int main(){
     std::cout << "-----" << std::endl;
     print_item_count();
 
-   
-    
+
+
     return 0;
 }
