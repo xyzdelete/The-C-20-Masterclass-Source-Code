@@ -1,7 +1,6 @@
 #include <iostream>
 #include "person.h"
 
-
 //Declaration and definition
 double weight;
 
@@ -18,18 +17,14 @@ double add(double a, double b);
 
 
 //Declaration and definition
-struct Point{
+struct Point {
     double m_x;
     double m_y;
 };
 
 
-
-
-
-
-
-int main(){
+int main()
+{
     /*
    // weight = 5; // Assignment
 
@@ -39,9 +34,9 @@ int main(){
     std::cout << "result : " << result << std::endl;
     */
 
-   Person p1("John Snow",27);
-   p1.print_info();
-  
+    Person p1("John Snow", 27);
+    p1.print_info();
+
     return 0;
 }
 
