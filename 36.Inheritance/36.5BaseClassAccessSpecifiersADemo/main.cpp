@@ -4,9 +4,9 @@
 #include "nurse.h"
 #include "engineer.h"
 
-int main(){
-
-    Person person1("Daniel Gray",27,"Blue Sky St 233 #56");
+int main()
+{
+    Person person1("Daniel Gray", 27, "Blue Sky St 233 #56");
     std::cout << "person1 : " << person1 << std::endl;
 
     std::cout << "---------------" << std::endl;
@@ -27,6 +27,6 @@ int main(){
     //engineer1.m_full_name = "Olivier Godson"; // Compiler error
     //engineer1.m_age = 55; // Compiler error
     //engineer1.m_address = "dsakfd;aslfjd;laskf"; // Compiler error
-   
+
     return 0;
 }
