@@ -3,8 +3,8 @@
 #include "engineer.h"
 #include "civilengineer.h"
 
-int main(){
-
+int main()
+{
     CivilEngineer ce1;
 
     return 0;
