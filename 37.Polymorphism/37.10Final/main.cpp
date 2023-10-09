@@ -8,11 +8,12 @@ class Plane final{
 
 //This will trigger a compiler error
 class FigherJet : public Plane{
-    
+
 };
 */
 
-int main(){
+int main()
+{
 
     std::cout << "Hello" << std::endl;
     return 0;
