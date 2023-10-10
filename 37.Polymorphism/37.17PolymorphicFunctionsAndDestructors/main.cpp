@@ -8,7 +8,8 @@ public:
     {
         std::cout << "Base constructor called" << std::endl;
     }
-    virtual ~Base(){
+    virtual ~Base()
+    {
         std::cout << "Base destructor called" << std::endl;
     }
     virtual void setup()
@@ -16,7 +17,8 @@ public:
         std::cout << "Base::setup() called" << std::endl;
         m_value = 10;
     }
-    virtual void clean_up(){
+    virtual void clean_up()
+    {
         std::cout << "Base::clean_up() called" << std::endl;
     }
     int get_value()
@@ -35,7 +37,8 @@ public:
     {
         std::cout << "Derived constructor called" << std::endl;
     }
-    virtual ~Derived(){
+    virtual ~Derived()
+    {
         std::cout << "Derived destructor called" << std::endl;
     }
 
@@ -44,24 +47,26 @@ public:
         std::cout << "Derived::setup() called" << std::endl;
         m_value = 100;
     }
-    virtual void clean_up() override{
+    virtual void clean_up() override
+    {
         std::cout << "Derived::clean_up() called" << std::endl;
     }
 };
 
 
-int main(){
+int main()
+{
 
-    Base * p_base = new Derived;
+    Base* p_base = new Derived;
 
     p_base->setup();
 
     auto value = p_base->get_value();
-    std::cout << "value : " << value <<  std::endl; // 100
+    std::cout << "value : " << value << std::endl; // 100
 
     p_base->clean_up();
 
     delete p_base;
-   
+
     return 0;
 }
