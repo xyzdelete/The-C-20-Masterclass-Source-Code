@@ -1,11 +1,10 @@
 #include <iostream>
 
-class override{
+class override {
 
 };
 
-int main(){
-
-
+int main()
+{
     return 0;
 }
