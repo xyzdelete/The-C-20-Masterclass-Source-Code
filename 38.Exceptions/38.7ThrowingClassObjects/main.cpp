@@ -1,52 +1,59 @@
 #include <iostream>
 
-
-
-class SomethingIsWrong{
-public : 
-    SomethingIsWrong(const std::string& s) 
+class SomethingIsWrong {
+public:
+    SomethingIsWrong(const std::string& s)
         : m_message(s)
-        {
-        }
-        
+    {
+    }
+
     //Copy Constructor
-    SomethingIsWrong(const SomethingIsWrong& source){
+    SomethingIsWrong(const SomethingIsWrong& source)
+    {
         std::cout << "Copy constructor for SomethingIsWrong called" << std::endl;
         m_message = source.m_message;
     }
-    
+
     //Destructor
-    ~SomethingIsWrong(){
+    ~SomethingIsWrong()
+    {
         std::cout << "SomethingIsWrong destructor called" << std::endl;
     }
-    const std::string& what()const{
+    const std::string& what()const
+    {
         return m_message;
     }
-private : 
+private:
     std::string m_message;
 };
 
 
-void do_something(size_t i){
-      if(i == 2){
-          throw SomethingIsWrong("i is 2");
-      }
-      std::cout << "Doing something at iteration : " << i << std::endl;
+void do_something(size_t i)
+{
+    if (i == 2)
+    {
+        throw SomethingIsWrong("i is 2");
+    }
+    std::cout << "Doing something at iteration : " << i << std::endl;
 }
 
 
 
-int main(){
+int main()
+{
 
-    for(size_t i{0}; i < 5 ; ++i){
-        
-      try{
-          do_something(i);
-      }
-      catch(SomethingIsWrong& ex){
-          std::cout << "Exception cought : " << ex.what() << std::endl;
-      }
+    for (size_t i { 0 }; i < 5 ; ++i)
+    {
+
+        try
+        {
+            do_something(i);
+        }
+        catch (SomethingIsWrong& ex)
+        {
+            std::cout << "Exception cought : " << ex.what() << std::endl;
+        }
     }
-   
+
     return 0;
 }
