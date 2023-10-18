@@ -3,21 +3,22 @@
 #include "boxcontainer.h"
 
 template <typename T>
-requires std::is_arithmetic_v<T>
-class Point{
-public : 
+	requires std::is_arithmetic_v<T>
+class Point {
+public:
 	Point() = default;
-	Point(T x, T y)  
-	: m_x(x), m_y(y)
+	Point(T x, T y)
+		: m_x(x), m_y(y)
 	{
 	}
-	friend std::ostream& operator<< ( std::ostream& out, const Point<T> operand){
+	friend std::ostream& operator<< (std::ostream& out, const Point<T> operand)
+	{
 		out << "Point [ x : " << operand.m_x
-					<< ", y : " << operand.m_y << "]";
+			<< ", y : " << operand.m_y << "]";
 		return out;
 	}
 	std::weak_ordering operator<=>(const Point& other) const = default;
-private : 
+private:
 	T m_x;
 	T m_y;
 };
@@ -34,7 +35,8 @@ struct  Cat
 
 
 
-int main(){
+int main()
+{
 
 	//Numbers
 	//std::floating_point<T>
@@ -60,7 +62,7 @@ int main(){
 	//static_assert(std::same_as<BoxContainer<int>, BoxContainer<double>>); // Fail
 	//static_assert(std::same_as<Point<int>,Point<int>>); // Success
 	//static_assert(std::same_as<Point<int>,Point<float>>); // Fail
-	
+
 
 	//std::destructible
 	//static_assert(std::destructible<Dog>);
@@ -69,5 +71,5 @@ int main(){
 	//std::copyable : needs a copy constructor
 	//And much more
 
-    return 0;
+	return 0;
 }
