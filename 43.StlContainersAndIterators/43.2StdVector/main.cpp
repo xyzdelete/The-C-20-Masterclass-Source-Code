@@ -2,11 +2,13 @@
 #include <vector>
 
 template <typename T>
-void print_vec( const std::vector<T>& vec){
-    for(size_t i{}; i < vec.size();++i){
+void print_vec(const std::vector<T>& vec)
+{
+    for (size_t i {}; i < vec.size(); ++i)
+    {
         std::cout << vec[i] << " ";
     }
-    std::cout << std::endl;    
+    std::cout << std::endl;
 }
 
 template <typename T>
@@ -19,10 +21,11 @@ void print_raw_array(const T* p, std::size_t size)
 }
 
 
-int main(){
+int main()
+{
 
     //Constructing vectors
-    std::vector<std::string> vec_str {"The","sky","is","blue","my","friend"};
+    std::vector<std::string> vec_str { "The","sky","is","blue","my","friend" };
     std::cout << "vec1[1]  : " << vec_str[1] << std::endl;
     print_vec(vec_str);
 
@@ -33,8 +36,8 @@ int main(){
     print_vec(ints1); // Won't print anything, the vector has no content
 
     std::vector<int> ints2 = { 1,2,3,4 };
-    std::vector<int> ints3{ 11,22,33,44 };
-    
+    std::vector<int> ints3 { 11,22,33,44 };
+
     std::cout << "ints2 : ";
     print_vec(ints2);
 
@@ -45,9 +48,9 @@ int main(){
     std::vector<int> ints4(20, 55); // A vector with 20 items, all initialized to 55
     std::cout << "ints4 : ";
     print_vec(ints4);
-    
+
     //Be careful about uniform initialization
-    std::vector<int> ints5{20, 55}; // A vector with 2 items : 20 and 55
+    std::vector<int> ints5 { 20, 55 }; // A vector with 2 items : 20 and 55
     std::cout << "ints5 : ";
     print_vec(ints5);
 
@@ -62,17 +65,17 @@ int main(){
 
     //Using the data method
     std::cout << "using raw array : " << std::endl;
-    print_raw_array(vec_str.data(),vec_str.size());
+    print_raw_array(vec_str.data(), vec_str.size());
 
 
     //Adding and removing stuff
     std::cout << std::endl;
     std::cout << "Adding and removing stuff : " << std::endl;
-    
+
     std::cout << "ints1 : " ;
     print_vec(ints1);
-    
-    
+
+
     //Pushing back
     ints1.push_back(100);
     ints1.push_back(200);
@@ -80,12 +83,12 @@ int main(){
     ints1.push_back(500);
     std::cout << "ints1 : " ;
     print_vec(ints1);
-    
+
     //Poping back
     ints1.pop_back();
     std::cout << "ints1 : " ;
     print_vec(ints1);
 
-   
+
     return 0;
 }
