@@ -3,12 +3,14 @@
 #include <array>
 
 template <typename T>
-void print_collection(const T& collection){
-    
+void print_collection(const T& collection)
+{
+
     auto it = collection.begin();
-    
+
     std::cout << " [";
-    while(it != collection.end()){
+    while (it != collection.end())
+    {
         std::cout << " " << *it ;
         ++it;
     }
@@ -16,10 +18,11 @@ void print_collection(const T& collection){
 }
 
 
-int main(){
+int main()
+{
 
-    std::vector<int> ints1{ 11,22,33,44 };
-    std::array<int,4> ints2 {100,200,300,400};
+    std::vector<int> ints1 { 11,22,33,44 };
+    std::array<int, 4> ints2 { 100,200,300,400 };
 
     std::vector<int>::iterator it_begin = ints1.begin();
     std::vector<int>::iterator it_end = ints1.end();
@@ -53,9 +56,9 @@ int main(){
     std::cout << "ints2 :";
     print_collection(ints2);
 
- 
 
 
-   
+
+
     return 0;
 }
