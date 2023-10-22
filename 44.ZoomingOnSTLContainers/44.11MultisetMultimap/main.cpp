@@ -2,7 +2,6 @@
 #include <set> // multiset
 #include <map> //multimap
 
-
 class Book{
     friend std::ostream& operator<< (std::ostream& out, const Book& operand);
 public : 
