@@ -3,7 +3,6 @@
 #include <set>
 #include <vector>
 
-
 struct Sum
 {
     void operator()(int n) { sum += n; }
