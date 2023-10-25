@@ -4,16 +4,18 @@
 #include <ranges>
 #include "boxcontainer.h"
 
-
 template <typename T>
-void print(const BoxContainer<T>&  c){
-    for(auto i : c){ // Computation happens here.
+void print(const BoxContainer<T>& c)
+{
+    for (auto i : c)
+    { // Computation happens here.
         std::cout << i << " ";
     }
     std::cout << std::endl;
 }
 
-int main(){
+int main()
+{
 
     BoxContainer<int> vi;
     vi.add(5);
@@ -29,7 +31,8 @@ int main(){
     const BoxContainer<int> copy(vi);
 
     std::cout << "data : ";
-    for (auto it = copy.begin(); it!=copy.end(); ++it){
+    for (auto it = copy.begin(); it != copy.end(); ++it)
+    {
         std::cout << (*it) << " ";
     }
     std::cout << std::endl;
@@ -38,7 +41,7 @@ int main(){
     //print(copy);
 
 
-   
- 
+
+
     return 0;
 }
