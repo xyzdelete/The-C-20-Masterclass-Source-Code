@@ -4,17 +4,20 @@
 #include "boxcontainer.h"
 
 template <typename T>
-std::ostream& operator<<( std::ostream& out,const  std::vector<T>& vec){
+std::ostream& operator<<(std::ostream& out, const  std::vector<T>& vec)
+{
     out << " [ ";
-    for(auto i : vec){
-        out << i  << " ";
+    for (auto i : vec)
+    {
+        out << i << " ";
     }
     out << "]";
     return out;
 }
 
 
-int main(){
+int main()
+{
 
     //std::vector<int> box1 {8,1,4,2,5,3,7,9};
     BoxContainer<int> box1;
@@ -27,14 +30,17 @@ int main(){
     box1.add(7);
     box1.add(9);
     box1.add(6);
-   
+
 
     std::cout << "box : " << box1 << std::endl;
 
     //find algorithm
-    if (std::ranges::find(box1, 8) != box1.end()) {
+    if (std::ranges::find(box1, 8) != box1.end())
+    {
         std::cout << "numbers contains: " << 8 << std::endl;
-    } else {
+    }
+    else
+    {
         std::cout << "numbers does not contain: " << 8 << std::endl;
     }
 
@@ -49,6 +55,6 @@ int main(){
     }
     std::cout << std::endl;
     */
-   
+
     return 0;
 }
