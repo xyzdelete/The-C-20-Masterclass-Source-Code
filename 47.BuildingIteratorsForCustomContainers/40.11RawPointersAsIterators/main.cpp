@@ -4,7 +4,6 @@
 #include <ranges>
 #include "boxcontainer.h"
 
-
 template <typename T>
 void print(const BoxContainer<T>&  c){
     for(auto i : c){ // Computation happens here.
