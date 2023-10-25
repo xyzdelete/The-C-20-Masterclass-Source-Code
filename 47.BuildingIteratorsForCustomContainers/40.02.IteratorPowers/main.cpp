@@ -4,10 +4,12 @@
 #include <ranges>
 
 template <typename T>
-std::ostream& operator<<( std::ostream& out,const  std::vector<T>& vec){
+std::ostream& operator<<(std::ostream& out, const  std::vector<T>& vec)
+{
     out << " [ ";
-    for(auto i : vec){
-        out << i  << " ";
+    for (auto i : vec)
+    {
+        out << i << " ";
     }
     out << "]";
     return out;
@@ -15,11 +17,12 @@ std::ostream& operator<<( std::ostream& out,const  std::vector<T>& vec){
 
 
 
-int main(){
+int main()
+{
 
     //Source collection
-    std::vector<int> numbers {1,9,3,7,2,5,4,6,89};
-    std::cout << "numbers : " <<  numbers << std::endl;
+    std::vector<int> numbers { 1,9,3,7,2,5,4,6,89 };
+    std::cout << "numbers : " << numbers << std::endl;
 
 
     //Iterators returned by begin() are input iterators. The requirement is that we are
@@ -62,32 +65,32 @@ int main(){
     std::cout << "numbers : " << numbers << std::endl;
     */
 
-   //Bidirectional iterator
-   /*
-    std::cout << "---------------(bi-directional)-------------" << std::endl;
-
-    std::cout << "numbers : " << numbers << std::endl;
-    auto it_first = numbers.begin();
-    auto it_last  = numbers.end();
-    while (it_last-- != it_first) {
-        std::cout << *it_last << " ";
-    }
-
-    std::cout << std::endl;
-    std::ranges::reverse(numbers.begin(),numbers.end());
-    std::cout << "numbers : " << numbers << std::endl;
-    */
-
-    //Random access iteator : std::ranges::sort
-    //Contiguous iterator : C++ 20 don't have a concrete example for this
+    //Bidirectional iterator
     /*
-    std::cout << "---------------(sort)-------------" << std::endl;
-    std::cout << "numbers : " << numbers << std::endl;
+     std::cout << "---------------(bi-directional)-------------" << std::endl;
 
-    //Sorting the collection
-    std::ranges::sort(numbers);
-    std::cout << "numbers : " << numbers << std::endl;
-    */
-   
+     std::cout << "numbers : " << numbers << std::endl;
+     auto it_first = numbers.begin();
+     auto it_last  = numbers.end();
+     while (it_last-- != it_first) {
+         std::cout << *it_last << " ";
+     }
+
+     std::cout << std::endl;
+     std::ranges::reverse(numbers.begin(),numbers.end());
+     std::cout << "numbers : " << numbers << std::endl;
+     */
+
+     //Random access iteator : std::ranges::sort
+     //Contiguous iterator : C++ 20 don't have a concrete example for this
+     /*
+     std::cout << "---------------(sort)-------------" << std::endl;
+     std::cout << "numbers : " << numbers << std::endl;
+
+     //Sorting the collection
+     std::ranges::sort(numbers);
+     std::cout << "numbers : " << numbers << std::endl;
+     */
+
     return 0;
 }
