@@ -3,34 +3,38 @@
 
 
 struct CoroType {
-    struct promise_type { 
+    struct promise_type {
         int m_value;
-        CoroType get_return_object() { return CoroType(this); }    
-        std::suspend_always initial_suspend() { return {}; }        
-        std::suspend_always final_suspend() noexcept{ return {}; }
-      
+        CoroType get_return_object() { return CoroType(this); }
+        std::suspend_always initial_suspend() { return {}; }
+        std::suspend_always final_suspend() noexcept { return {}; }
+
         void unhandled_exception() noexcept
         {
             std::rethrow_exception(std::current_exception());
         }
-        std::suspend_always yield_value(int val) {
-            m_value = val; 
+        std::suspend_always yield_value(int val)
+        {
+            m_value = val;
             return {};
         }
-       
+
     };
     CoroType(promise_type* p)
-         : m_handle(std::coroutine_handle<promise_type>::from_promise(*p)) {}
+        : m_handle(std::coroutine_handle<promise_type>::from_promise(*p))
+    {
+    }
     ~CoroType()
-     {
-         std::cout << "Handle destroyed..." << std::endl;
-          m_handle.destroy();
-     }
+    {
+        std::cout << "Handle destroyed..." << std::endl;
+        m_handle.destroy();
+    }
     std::coroutine_handle<promise_type>   m_handle;
 };
 
 
-CoroType do_work() {
+CoroType do_work()
+{
     std::cout << "Starting the coroutine..." << std::endl;
     co_yield 1;
     co_yield 2;
@@ -41,7 +45,8 @@ CoroType do_work() {
 
 
 
-int main(){
+int main()
+{
 
     auto task = do_work();
 
