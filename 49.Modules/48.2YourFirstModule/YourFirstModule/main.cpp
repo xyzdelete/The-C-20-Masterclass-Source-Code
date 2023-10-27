@@ -10,7 +10,6 @@ int main()
     std::cout << "result : " << result << std::endl;
 
     greet("John");
-
     print_name_length("John");
 }
 
